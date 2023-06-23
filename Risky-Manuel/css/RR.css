@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Lily+Script+One&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #ddd;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Lily Script One";
+  color: #505e77;
+  letter-spacing: 7px;
+}
+
+.imgContainer {
+  position: relative;
+  width: 200px;
+  height: 220px;
+  overflow: hidden;
+}
+.imgContainer img.bottle {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 18px;
+  -webkit-animation: floating 1.75s ease-in-out infinite alternate;
+          animation: floating 1.75s ease-in-out infinite alternate;
+}
+.imgContainer img.wave {
+  -webkit-animation: wave 2.3s linear infinite;
+          animation: wave 2.3s linear infinite;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+}
+.imgContainer img.wave.delay {
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@-webkit-keyframes floating {
+  from {
+    transform: translate(-50%, 10px);
+  }
+  to {
+    transform: translate(-50%, -10px);
+  }
+}
+@keyframes floating {
+  from {
+    transform: translate(-50%, 10px);
+  }
+  to {
+    transform: translate(-50%, -10px);
+  }
+}
